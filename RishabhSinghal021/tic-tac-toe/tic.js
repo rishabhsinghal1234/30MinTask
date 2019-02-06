@@ -1,10 +1,4 @@
-
-//var player1score=document.getElementById(player1score).innerHTML;
-//var player2score=0;//=document.getElementById(player2score).value;
-//var player2score=document.getElementById(player1score).innerHTML;
-//var player2score=document.getElementById(player2score).innerHTML;
 document.getElementById("player").innerHTML = localStorage.getItem('name')+" Score(X)";
-var ChanceCount=0;
 var CellCheck=0;
 var score = localStorage.getItem('score');
 console.log(score);
@@ -19,21 +13,19 @@ function clickevent(id){
 				if(CellCheck==0){
 								document.getElementById(id).innerHTML="X";
 								document.getElementById(id).style.backgroundColor = "#ff6a00";
-								ChanceCount = ChanceCount +1;
-								MatchRefereee();
+								Match();
 								CellCheck=1;
 								}								
 								
 				else{
 							document.getElementById(id).innerHTML="O";
 							document.getElementById(id).style.backgroundColor = "#76b852";
-							ChanceCount = ChanceCount +1;
-							MatchRefereee();
+							Match();
 							CellCheck=0;
 					}
 			}
 }
-function MatchRefereee(){
+function Match(){
 	var one = document.getElementById("1").innerHTML;
     var two = document.getElementById("2").innerHTML;
     var three = document.getElementById("3").innerHTML;
@@ -73,7 +65,8 @@ function MatchRefereee(){
 		   updateScore();
 	   }
 	   else if(ChanceCount == 9){
-		   alert("tie");  
+		   alert("tie");
+		   window.location="tictactoe.html";
 	   }
 }
 
