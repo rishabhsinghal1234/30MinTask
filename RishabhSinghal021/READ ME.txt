@@ -1,0 +1,6 @@
+In this folder, I have index page which is used to login and one sign-up page which is used to create an account
+
+once user signed-in/ loged in, user can able to play game and his/her score display on the screen and 
+according his win or loss the score get updated.
+
+ 
